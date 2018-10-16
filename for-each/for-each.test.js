@@ -52,7 +52,6 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
-  console.log('num', num, 'arr', arr);
   if (num % 3 === 2) {
     arr.pop();
   }
@@ -87,9 +86,12 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  arr.forEach((e, i, arr) => {
-
-  })
+  arr.forEach((item, i, arr) => {
+    if (item % 3 === 2) {
+      arr.pop();
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
