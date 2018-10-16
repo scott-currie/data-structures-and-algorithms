@@ -52,7 +52,7 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
-  // console.log(arr);
+  console.log('num', num, 'arr', arr);
   if (num % 3 === 2) {
     arr.pop();
   }
@@ -72,7 +72,8 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  arr.forEach(removeOne(arr));
+  arr.forEach(item => callback(item, arr));
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,7 +138,7 @@ const fizzbuzz = (arr) => {
   arr.forEach((item) => {
     let result = '';
     if (item % 3 === 0) {
-      result = 'Fizz';
+      result += 'Fizz';
     }
     if (item % 5 === 0) {
       if (result === 'Fizz') {
