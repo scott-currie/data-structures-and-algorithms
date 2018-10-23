@@ -79,7 +79,8 @@ Write a function named getHouses that returns a new array containing the names o
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  arr.forEach(chr => houses.push(chr.house));
+  console.log(houses);
   return houses;
 }
 
@@ -123,7 +124,17 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 
 const houseSize = (arr) => {
   const sizes = [];
-  // Solution code here...
+  // arr.forEach(chr => {
+  //   for (let house of sizes) {
+  //     console.log(house);
+  //     if (house.house === chr.name) {
+  //       house.members++;
+  //     }
+  //     else {
+  //       sizes.push({house: chr.name; members: 1});
+  //     }
+  //   }
+  // });
   return sizes;
 }
 
